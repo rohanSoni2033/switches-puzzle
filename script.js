@@ -25,7 +25,7 @@ const init = function () {
           <h1 class="indicator-off">OFF</h1>
           </div>
             <div class="switch-toggle">
-                ${index + 1}
+            <p class="toggle-index">${index + 1}</p>
             </div>
             <p></p>
           </div>
