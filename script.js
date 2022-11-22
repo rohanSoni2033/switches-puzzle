@@ -12,6 +12,8 @@ const init = function () {
 
   const switchesContainer = document.querySelector('.switchesContainer');
 
+  const clickSound = document.querySelector('.click-sound');
+
   Object.keys(switchAlgorithm).forEach((title, index) => {
     const markup = `
     <div class="switch">
@@ -34,6 +36,7 @@ const init = function () {
 
   document.querySelectorAll('.checkbox').forEach(switchButton => {
     switchButton.addEventListener('change', function () {
+      clickSound.play();
       switchAlgorithm[this.dataset.switchid].forEach(btn => {
         const targetButton = document.querySelector(
           `.checkbox[data-switchid=${btn}]`
